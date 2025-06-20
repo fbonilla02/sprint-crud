@@ -1,0 +1,14 @@
+services:
+  mysql_native_ok:
+    image: mysql:8
+    container_name: mysql_native_ok
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: clave123
+      MYSQL_DATABASE: mi_base
+      MYSQL_USER: francisco
+      MYSQL_PASSWORD: claveSegura
+    restart: unless-stopped
+    volumes:
+      - mysql_data:/var/lib/mysql
