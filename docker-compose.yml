@@ -11,4 +11,4 @@ services:
       MYSQL_PASSWORD: claveSegura
     restart: unless-stopped
     volumes:
-      - mysql_data:/var/lib/mysql
+      - ./mysql_data:/var/lib/mysql
